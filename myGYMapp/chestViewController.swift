@@ -7,23 +7,29 @@
 
 import UIKit
 
-
-
-class chestViewController: UIViewController , chestProtocl {
+class chestViewController: UIViewController {
     
-    func sendChestData(proChestKind: String, proChestWeight: Double, proChestCount: Int, proChestSet: Int) {
-        let kind = proChestKind
-        let weight = proChestWeight
-        let count = proChestCount
-        let set = proChestSet
-        let data = optionList(kind: kind, weight: weight, count: count, set: set)
-        self.chestArray.append(data)
-        
-        let total = weight * Double(count) * Double(set)
-        self.chestTotalVolume.append(total)
-        self.tableView.reloadData()
-        print("chestViewController 에서 프로토콜에대한 sendChestData 메서드가 실행됨.")
+    var kind: String = "" {
+        didSet {
+            print("kind 에 값들어옴 --> \(kind)")
+        }
     }
+    var weight: Double = 0.0 {
+        didSet {
+            print("weight 에 값들어옴 --> \(weight)")
+        }
+    }
+    var count: Int = 0 {
+        didSet {
+            print("count 에 값들어옴 --> \(count)")
+        }
+    }
+    var set: Int = 0 {
+        didSet {
+            print("set 에 값들어옴 --> \(set)")
+        }
+    }
+    
     
     var chestArray = [optionList]() {
         didSet {
@@ -98,14 +104,19 @@ class chestViewController: UIViewController , chestProtocl {
     @IBAction func tapAddChest(_ sender: UIBarButtonItem) {
         
         guard let addChestVC = self.storyboard?.instantiateViewController(identifier: "addChestViewController") as? addChestViewController else {return}
-        addChestVC.chestDelegate = self
+      
         self.navigationController?.pushViewController(addChestVC, animated: true)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        print("viewWillAppear 호출됨, 테이블뷰리로드")
+        self.tableView.reloadData()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         let total = chestTotalVolume.reduce(0.0 , +)
         NotificationCenter.default.post(name: Notification.Name.chestFinalTotalVolume, object: Double(total))
-        // 도전(성공) >> chestVC 에서 addChestVC 로 왔다갔다할때는 데이터들이 다 그대로남아서 셀이 표시가됬었으나, addChestVC 말고 다른곳에 다녀올때는 계속 사라졌었음 데이터가. 그래서 뷰가 사라질때 현재 가지고있는 데이턷라도 한번더 저장하고끝냈는데 되버렸음. ㅇㅅㅇ
+      
         saveDataOfChestArray()
         saveDataOfChestTotalVolume()
     }

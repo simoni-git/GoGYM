@@ -7,19 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		040975142B19D7DC00E81C6E /* AddChestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040975132B19D7DC00E81C6E /* AddChestViewModel.swift */; };
-		040975162B1B34F000E81C6E /* AddBackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040975152B1B34F000E81C6E /* AddBackViewModel.swift */; };
-		040975182B1B367B00E81C6E /* AddLegViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040975172B1B367B00E81C6E /* AddLegViewModel.swift */; };
-		0409751A2B1B3A6000E81C6E /* AddShoulderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040975192B1B3A6000E81C6E /* AddShoulderViewModel.swift */; };
-		0409751C2B1B3B2800E81C6E /* AddArmViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0409751B2B1B3B2800E81C6E /* AddArmViewModel.swift */; };
-		0409751F2B1B3D8C00E81C6E /* ChestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0409751E2B1B3D8C00E81C6E /* ChestViewModel.swift */; };
-		040975212B1B437D00E81C6E /* BackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040975202B1B437D00E81C6E /* BackViewModel.swift */; };
-		040975232B1B45E300E81C6E /* LegViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040975222B1B45E300E81C6E /* LegViewModel.swift */; };
-		040975252B1B475800E81C6E /* ShoulderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040975242B1B475800E81C6E /* ShoulderViewModel.swift */; };
-		040975272B1B48D700E81C6E /* ArmViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040975262B1B48D700E81C6E /* ArmViewModel.swift */; };
-		040975292B1B58FE00E81C6E /* HistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040975282B1B58FE00E81C6E /* HistoryViewModel.swift */; };
-		0409752B2B1B5BE900E81C6E /* FinishViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0409752A2B1B5BE900E81C6E /* FinishViewModel.swift */; };
-		0409752D2B1B5FAD00E81C6E /* GymKindViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0409752C2B1B5FAD00E81C6E /* GymKindViewModel.swift */; };
 		041657DE2AEF8E0600BA3647 /* saveList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041657DD2AEF8E0600BA3647 /* saveList.swift */; };
 		046801AE2AF4EDF400E71CEC /* addLegViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046801AD2AF4EDF400E71CEC /* addLegViewController.swift */; };
 		046801B02AF4EE2200E71CEC /* addShoulderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046801AF2AF4EE2200E71CEC /* addShoulderViewController.swift */; };
@@ -42,22 +29,10 @@
 		049F2E8C2AF37E11008BF1EC /* addBackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F2E8B2AF37E11008BF1EC /* addBackViewController.swift */; };
 		04C01D162AF1F99A00CB4B39 /* HistoryInfo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 04C01D142AF1F99A00CB4B39 /* HistoryInfo.xcdatamodeld */; };
 		04C01D3F2AF2681900CB4B39 /* addChestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C01D3E2AF2681900CB4B39 /* addChestViewController.swift */; };
+		E41706952B21AA20004C3DA5 /* extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41706942B21AA20004C3DA5 /* extention.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		040975132B19D7DC00E81C6E /* AddChestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddChestViewModel.swift; sourceTree = "<group>"; };
-		040975152B1B34F000E81C6E /* AddBackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBackViewModel.swift; sourceTree = "<group>"; };
-		040975172B1B367B00E81C6E /* AddLegViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLegViewModel.swift; sourceTree = "<group>"; };
-		040975192B1B3A6000E81C6E /* AddShoulderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddShoulderViewModel.swift; sourceTree = "<group>"; };
-		0409751B2B1B3B2800E81C6E /* AddArmViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddArmViewModel.swift; sourceTree = "<group>"; };
-		0409751E2B1B3D8C00E81C6E /* ChestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChestViewModel.swift; sourceTree = "<group>"; };
-		040975202B1B437D00E81C6E /* BackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackViewModel.swift; sourceTree = "<group>"; };
-		040975222B1B45E300E81C6E /* LegViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegViewModel.swift; sourceTree = "<group>"; };
-		040975242B1B475800E81C6E /* ShoulderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoulderViewModel.swift; sourceTree = "<group>"; };
-		040975262B1B48D700E81C6E /* ArmViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArmViewModel.swift; sourceTree = "<group>"; };
-		040975282B1B58FE00E81C6E /* HistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewModel.swift; sourceTree = "<group>"; };
-		0409752A2B1B5BE900E81C6E /* FinishViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishViewModel.swift; sourceTree = "<group>"; };
-		0409752C2B1B5FAD00E81C6E /* GymKindViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymKindViewModel.swift; sourceTree = "<group>"; };
 		041657DD2AEF8E0600BA3647 /* saveList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = saveList.swift; sourceTree = "<group>"; };
 		046801AD2AF4EDF400E71CEC /* addLegViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addLegViewController.swift; sourceTree = "<group>"; };
 		046801AF2AF4EE2200E71CEC /* addShoulderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addShoulderViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +57,7 @@
 		049F2E8B2AF37E11008BF1EC /* addBackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addBackViewController.swift; sourceTree = "<group>"; };
 		04C01D152AF1F99A00CB4B39 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		04C01D3E2AF2681900CB4B39 /* addChestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addChestViewController.swift; sourceTree = "<group>"; };
+		E41706942B21AA20004C3DA5 /* extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extention.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,102 +71,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0409751D2B1B3C6300E81C6E /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				041657DD2AEF8E0600BA3647 /* saveList.swift */,
-				049A54A52AE7622D0021DB50 /* optionList.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		0409752E2B1B604E00E81C6E /* History */ = {
-			isa = PBXGroup;
-			children = (
-				047EEB432AE6E07D000550C2 /* historyViewController.swift */,
-				040975282B1B58FE00E81C6E /* HistoryViewModel.swift */,
-			);
-			path = History;
-			sourceTree = "<group>";
-		};
-		040975302B1B608000E81C6E /* Main */ = {
-			isa = PBXGroup;
-			children = (
-				047EEB252AE6D3C5000550C2 /* mainViewController.swift */,
-			);
-			path = Main;
-			sourceTree = "<group>";
-		};
-		040975312B1B609100E81C6E /* GymKind */ = {
-			isa = PBXGroup;
-			children = (
-				047EEB352AE6D93F000550C2 /* gymKindViewController.swift */,
-				0409752C2B1B5FAD00E81C6E /* GymKindViewModel.swift */,
-			);
-			path = GymKind;
-			sourceTree = "<group>";
-		};
-		040975322B1B60C300E81C6E /* DefaultVCs */ = {
-			isa = PBXGroup;
-			children = (
-				047EEB372AE6DD93000550C2 /* chestViewController.swift */,
-				047EEB392AE6DEEB000550C2 /* backViewController.swift */,
-				047EEB3B2AE6DEFA000550C2 /* legViewController.swift */,
-				047EEB3D2AE6DF04000550C2 /* shoulderViewController.swift */,
-				047EEB3F2AE6DF0C000550C2 /* armViewController.swift */,
-			);
-			path = DefaultVCs;
-			sourceTree = "<group>";
-		};
-		040975332B1B60F600E81C6E /* AddVCs */ = {
-			isa = PBXGroup;
-			children = (
-				04C01D3E2AF2681900CB4B39 /* addChestViewController.swift */,
-				049F2E8B2AF37E11008BF1EC /* addBackViewController.swift */,
-				046801AD2AF4EDF400E71CEC /* addLegViewController.swift */,
-				046801AF2AF4EE2200E71CEC /* addShoulderViewController.swift */,
-				046801B12AF4EE4700E71CEC /* addArmViewController.swift */,
-			);
-			path = AddVCs;
-			sourceTree = "<group>";
-		};
-		040975342B1B612900E81C6E /* DefaultVMs */ = {
-			isa = PBXGroup;
-			children = (
-				0409751E2B1B3D8C00E81C6E /* ChestViewModel.swift */,
-				040975202B1B437D00E81C6E /* BackViewModel.swift */,
-				040975222B1B45E300E81C6E /* LegViewModel.swift */,
-				040975242B1B475800E81C6E /* ShoulderViewModel.swift */,
-				040975262B1B48D700E81C6E /* ArmViewModel.swift */,
-			);
-			path = DefaultVMs;
-			sourceTree = "<group>";
-		};
-		040975352B1B615100E81C6E /* AddVMs */ = {
-			isa = PBXGroup;
-			children = (
-				040975132B19D7DC00E81C6E /* AddChestViewModel.swift */,
-				040975152B1B34F000E81C6E /* AddBackViewModel.swift */,
-				040975172B1B367B00E81C6E /* AddLegViewModel.swift */,
-				040975192B1B3A6000E81C6E /* AddShoulderViewModel.swift */,
-				0409751B2B1B3B2800E81C6E /* AddArmViewModel.swift */,
-			);
-			path = AddVMs;
-			sourceTree = "<group>";
-		};
-		040975362B1B617000E81C6E /* Finish */ = {
-			isa = PBXGroup;
-			children = (
-				047EEB412AE6DF18000550C2 /* finishViewController.swift */,
-				0409752A2B1B5BE900E81C6E /* FinishViewModel.swift */,
-			);
-			path = Finish;
-			sourceTree = "<group>";
-		};
 		047EEB152AE6D3C5000550C2 = {
 			isa = PBXGroup;
 			children = (
-				0409751D2B1B3C6300E81C6E /* Model */,
+				049A54A52AE7622D0021DB50 /* optionList.swift */,
+				041657DD2AEF8E0600BA3647 /* saveList.swift */,
 				047EEB202AE6D3C5000550C2 /* myGYMapp */,
 				047EEB1F2AE6D3C5000550C2 /* Products */,
 			);
@@ -209,15 +94,22 @@
 			children = (
 				047EEB212AE6D3C5000550C2 /* AppDelegate.swift */,
 				047EEB232AE6D3C5000550C2 /* SceneDelegate.swift */,
+				E41706942B21AA20004C3DA5 /* extention.swift */,
 				047EEB272AE6D3C5000550C2 /* Main.storyboard */,
-				0409752E2B1B604E00E81C6E /* History */,
-				040975302B1B608000E81C6E /* Main */,
-				040975312B1B609100E81C6E /* GymKind */,
-				040975322B1B60C300E81C6E /* DefaultVCs */,
-				040975332B1B60F600E81C6E /* AddVCs */,
-				040975342B1B612900E81C6E /* DefaultVMs */,
-				040975352B1B615100E81C6E /* AddVMs */,
-				040975362B1B617000E81C6E /* Finish */,
+				047EEB432AE6E07D000550C2 /* historyViewController.swift */,
+				047EEB252AE6D3C5000550C2 /* mainViewController.swift */,
+				047EEB352AE6D93F000550C2 /* gymKindViewController.swift */,
+				047EEB372AE6DD93000550C2 /* chestViewController.swift */,
+				04C01D3E2AF2681900CB4B39 /* addChestViewController.swift */,
+				047EEB392AE6DEEB000550C2 /* backViewController.swift */,
+				049F2E8B2AF37E11008BF1EC /* addBackViewController.swift */,
+				047EEB3B2AE6DEFA000550C2 /* legViewController.swift */,
+				046801AD2AF4EDF400E71CEC /* addLegViewController.swift */,
+				047EEB3D2AE6DF04000550C2 /* shoulderViewController.swift */,
+				046801AF2AF4EE2200E71CEC /* addShoulderViewController.swift */,
+				047EEB3F2AE6DF0C000550C2 /* armViewController.swift */,
+				046801B12AF4EE4700E71CEC /* addArmViewController.swift */,
+				047EEB412AE6DF18000550C2 /* finishViewController.swift */,
 				047EEB2A2AE6D3C7000550C2 /* Assets.xcassets */,
 				047EEB2C2AE6D3C7000550C2 /* LaunchScreen.storyboard */,
 				047EEB2F2AE6D3C7000550C2 /* Info.plist */,
@@ -297,7 +189,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0409751F2B1B3D8C00E81C6E /* ChestViewModel.swift in Sources */,
 				047EEB362AE6D93F000550C2 /* gymKindViewController.swift in Sources */,
 				047EEB422AE6DF18000550C2 /* finishViewController.swift in Sources */,
 				047EEB262AE6D3C5000550C2 /* mainViewController.swift in Sources */,
@@ -308,27 +199,16 @@
 				046801B22AF4EE4700E71CEC /* addArmViewController.swift in Sources */,
 				04C01D3F2AF2681900CB4B39 /* addChestViewController.swift in Sources */,
 				046801B02AF4EE2200E71CEC /* addShoulderViewController.swift in Sources */,
-				040975142B19D7DC00E81C6E /* AddChestViewModel.swift in Sources */,
 				047EEB3E2AE6DF04000550C2 /* shoulderViewController.swift in Sources */,
-				040975212B1B437D00E81C6E /* BackViewModel.swift in Sources */,
 				047EEB3C2AE6DEFA000550C2 /* legViewController.swift in Sources */,
-				0409751C2B1B3B2800E81C6E /* AddArmViewModel.swift in Sources */,
-				0409752D2B1B5FAD00E81C6E /* GymKindViewModel.swift in Sources */,
-				040975252B1B475800E81C6E /* ShoulderViewModel.swift in Sources */,
-				040975182B1B367B00E81C6E /* AddLegViewModel.swift in Sources */,
+				E41706952B21AA20004C3DA5 /* extention.swift in Sources */,
 				047EEB402AE6DF0C000550C2 /* armViewController.swift in Sources */,
 				049A54A62AE7622D0021DB50 /* optionList.swift in Sources */,
-				040975232B1B45E300E81C6E /* LegViewModel.swift in Sources */,
 				041657DE2AEF8E0600BA3647 /* saveList.swift in Sources */,
-				040975272B1B48D700E81C6E /* ArmViewModel.swift in Sources */,
-				0409751A2B1B3A6000E81C6E /* AddShoulderViewModel.swift in Sources */,
 				047EEB242AE6D3C5000550C2 /* SceneDelegate.swift in Sources */,
-				040975292B1B58FE00E81C6E /* HistoryViewModel.swift in Sources */,
 				046801AE2AF4EDF400E71CEC /* addLegViewController.swift in Sources */,
 				047EEB3A2AE6DEEB000550C2 /* backViewController.swift in Sources */,
 				049F2E8C2AF37E11008BF1EC /* addBackViewController.swift in Sources */,
-				0409752B2B1B5BE900E81C6E /* FinishViewModel.swift in Sources */,
-				040975162B1B34F000E81C6E /* AddBackViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

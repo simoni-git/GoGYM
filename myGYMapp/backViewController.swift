@@ -6,21 +6,29 @@
 //
 
 import UIKit
+ 
 
-class backViewController: UIViewController , backProtocl{
+class backViewController: UIViewController {
     
-    func sendBackData(proBackKind: String, proBackWeight: Double, proBackCount: Int, proBackSet: Int) {
-        let kind = proBackKind
-        let weight = proBackWeight
-        let count = proBackCount
-        let set = proBackSet
-        let data = optionList(kind: kind, weight: weight, count: count, set: set)
-        self.backArray.append(data)
-        
-        let total = weight * Double(count) * Double(set)
-        self.backTotalVolume.append(total)
-        self.tableView.reloadData()
-        print("backViewController 에서 프로토콜에대한 sendBackData 메서드가 실행됨.")
+    var kind: String = "" {
+        didSet {
+            print("kind 에 값들어옴 --> \(kind)")
+        }
+    }
+    var weight: Double = 0.0 {
+        didSet {
+            print("weight 에 값들어옴 --> \(weight)")
+        }
+    }
+    var count: Int = 0 {
+        didSet {
+            print("count 에 값들어옴 --> \(count)")
+        }
+    }
+    var set: Int = 0 {
+        didSet {
+            print("set 에 값들어옴 --> \(set)")
+        }
     }
     
     var backArray = [optionList]() {
@@ -96,8 +104,12 @@ class backViewController: UIViewController , backProtocl{
     @IBAction func tapAddBack(_ sender: UIBarButtonItem) {
         
         guard let addBackVC = self.storyboard?.instantiateViewController(identifier: "addBackViewController") as? addBackViewController else {return}
-        addBackVC.backDelegate = self
         self.navigationController?.pushViewController(addBackVC, animated: true)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        print("viewWillAppear 호출됨, 테이블뷰리로드")
+        self.tableView.reloadData()
     }
     
     override func viewWillDisappear(_ animated: Bool) {

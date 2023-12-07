@@ -6,16 +6,16 @@
 //
 
 import UIKit
+import Combine
 
-protocol shoulderProtocol {
-    func sendShoulderData(proShoulderKind: String , proShoulderWeight: Double , proShoulderCount: Int , proShoulderSet: Int) //델🧪
-}
 class addShoulderViewController: UIViewController {
     
     var data01Array = [optionList]()
     var data02Array = [Double]()
     
-    var shoulderDelegate: shoulderProtocol?
+    var bag = Set<AnyCancellable>() //🧪
+    var shoulderVC: shoulderViewController! //🧪
+   
     
     @IBOutlet var shoulderKindTextfield: UITextField!
     @IBOutlet var shoulderWeightTextfield: UITextField!
@@ -26,17 +26,37 @@ class addShoulderViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureView()
         
-        self.shoulderKindTextfield.placeholder = "EX : 밀리터리프레스"
-        self.shoulderWeightTextfield.placeholder = "EX: 30"
-        self.shoulderCountTextfield.placeholder = "EX: 10"
-        self.shoulderSetTextfield.placeholder = "EX: 5"
+        if let ShoulderMainVC = navigationController?.viewControllers.first(where: {$0 is shoulderViewController}) as? shoulderViewController {
+            shoulderVC = ShoulderMainVC
+            
+            shoulderKindTextfield
+                .myKindPublisher
+                .receive(on: DispatchQueue.main)
+                .assign(to: \.kind, on: shoulderVC)
+                .store(in: &bag)
+            
+            shoulderWeightTextfield
+                .myWeightPublisher
+                .receive(on: DispatchQueue.main)
+                .assign(to: \.weight, on: shoulderVC)
+                .store(in: &bag)
+            
+            shoulderCountTextfield
+                .myCountPublisher
+                .receive(on: DispatchQueue.main)
+                .assign(to: \.count, on: shoulderVC)
+                .store(in: &bag)
+            
+            shoulderSetTextfield
+                .mySetPublisher
+                .receive(on: DispatchQueue.main)
+                .assign(to: \.set, on: shoulderVC)
+                .store(in: &bag)
+        }
         
-        self.registerBtn.layer.cornerRadius = 30
-        shoulderKindTextfield.keyboardType = .default
-        shoulderWeightTextfield.keyboardType = .decimalPad
-        shoulderCountTextfield.keyboardType = .numberPad
-        shoulderSetTextfield.keyboardType = .numberPad
+       
     }
     
     @IBAction func tapRegisterBtn(_ sender: UIButton) {
@@ -45,8 +65,22 @@ class addShoulderViewController: UIViewController {
            let CountTextfield = shoulderCountTextfield.text, !CountTextfield.isEmpty, let countField = Int(CountTextfield),
            let SetTextfield = shoulderSetTextfield.text, !SetTextfield.isEmpty, let setField = Int(SetTextfield) {
             
-            shoulderDelegate?.sendShoulderData(proShoulderKind: kindField, proShoulderWeight: weightField, proShoulderCount: countField, proShoulderSet: setField)
-            
+            //⬇️🧪
+             let CombineChestKind = shoulderVC.kind
+             let CombineChestWeight = shoulderVC.weight
+             let CombineChestCount = shoulderVC.count
+             let CombineChestSet = shoulderVC.set
+             
+             let CombineTotal = CombineChestWeight * Double(CombineChestCount) * Double(CombineChestSet)
+             
+             let CombineChestData = optionList(kind: CombineChestKind, weight: CombineChestWeight, count: CombineChestCount, set: CombineChestSet)
+             
+             
+            shoulderVC.shoulderArray.append(CombineChestData)
+            shoulderVC.shoulderTotalVolume.append(CombineTotal)
+             
+             //⬇️ 여기는 userDefault 사용하는부분이니까 일단 터치 ㄴㄴ
+          
             let data01 = optionList(kind: kindField, weight: weightField, count: countField, set: setField)
             let data02 = weightField * Double(countField) * Double(setField)
             
@@ -74,6 +108,24 @@ class addShoulderViewController: UIViewController {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
+    }
+    
+    func configureView() {
+        self.shoulderKindTextfield.placeholder = "EX : 밀리터리프레스"
+        self.shoulderWeightTextfield.placeholder = "EX: 30"
+        self.shoulderCountTextfield.placeholder = "EX: 10"
+        self.shoulderSetTextfield.placeholder = "EX: 5"
+        
+        self.registerBtn.layer.cornerRadius = 30
+        shoulderKindTextfield.keyboardType = .default
+        shoulderWeightTextfield.keyboardType = .decimalPad
+        shoulderCountTextfield.keyboardType = .numberPad
+        shoulderSetTextfield.keyboardType = .numberPad
+    }
+    
+    deinit {
+        bag.forEach {$0.cancel()}
+        print("addchestvc 메모리에서 해제되면서 deinit 발동")
     }
     
 }

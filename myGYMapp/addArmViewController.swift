@@ -6,17 +6,17 @@
 //
 
 import UIKit
+import Combine
 
-protocol armProtocol {
-    func sendArmData(proArmKind: String , proArmWeight: Double , proArmCount: Int , proArmSet: Int) //델🧪
-}
+
 class addArmViewController: UIViewController {
     
     var data01Array = [optionList]()
     var data02Array = [Double]()
     
-    var armDelegate: armProtocol?
-    
+    var bag = Set<AnyCancellable>() //🧪
+    var armVC: armViewController! //🧪
+   
     @IBOutlet var armKindTextfield: UITextField!
     @IBOutlet var armWeightTextfield: UITextField!
     @IBOutlet var armCountTextfield: UITextField!
@@ -26,17 +26,37 @@ class addArmViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configure()
         
-        self.armKindTextfield.placeholder = "EX : 바벨컬"
-        self.armWeightTextfield.placeholder = "EX: 10"
-        self.armCountTextfield.placeholder = "EX: 10"
-        self.armSetTextfield.placeholder = "EX: 5"
+        if let ArmMainVC = navigationController?.viewControllers.first(where: {$0 is armViewController}) as? armViewController {
+           armVC = ArmMainVC
+            
+            armKindTextfield
+                .myKindPublisher
+                .receive(on: DispatchQueue.main)
+                .assign(to: \.kind, on: armVC)
+                .store(in: &bag)
+            
+            armWeightTextfield
+                .myWeightPublisher
+                .receive(on: DispatchQueue.main)
+                .assign(to: \.weight, on: armVC)
+                .store(in: &bag)
+            
+            armCountTextfield
+                .myCountPublisher
+                .receive(on: DispatchQueue.main)
+                .assign(to: \.count, on: armVC)
+                .store(in: &bag)
+            
+            armSetTextfield
+                .mySetPublisher
+                .receive(on: DispatchQueue.main)
+                .assign(to: \.set, on: armVC)
+                .store(in: &bag)
+        }
         
-        self.registerBtn.layer.cornerRadius = 30
-        armKindTextfield.keyboardType = .default
-        armWeightTextfield.keyboardType = .decimalPad
-        armCountTextfield.keyboardType = .numberPad
-        armSetTextfield.keyboardType = .numberPad
+        
     }
     
     @IBAction func tapRegisterBtn(_ sender: UIButton) {
@@ -45,7 +65,21 @@ class addArmViewController: UIViewController {
            let CountTextfield = armCountTextfield.text, !CountTextfield.isEmpty, let countField = Int(CountTextfield),
            let SetTextfield = armSetTextfield.text, !SetTextfield.isEmpty, let setField = Int(SetTextfield) {
             
-            armDelegate?.sendArmData(proArmKind: kindField, proArmWeight: weightField, proArmCount: countField, proArmSet: setField)
+            //⬇️🧪
+             let CombineChestKind = armVC.kind
+             let CombineChestWeight = armVC.weight
+             let CombineChestCount = armVC.count
+             let CombineChestSet = armVC.set
+             
+             let CombineTotal = CombineChestWeight * Double(CombineChestCount) * Double(CombineChestSet)
+             
+             let CombineChestData = optionList(kind: CombineChestKind, weight: CombineChestWeight, count: CombineChestCount, set: CombineChestSet)
+             
+             
+            armVC.armArray.append(CombineChestData)
+            armVC.armTotalVolume.append(CombineTotal)
+             
+             //⬇️ 여기는 userDefault 사용하는부분이니까 일단 터치 ㄴㄴ
             
             let data01 = optionList(kind: kindField, weight: weightField, count: countField, set: setField)
             let data02 = weightField * Double(countField) * Double(setField)
@@ -76,4 +110,22 @@ class addArmViewController: UIViewController {
         self.view.endEditing(true)
     }
     
+    func configure() {
+        self.armKindTextfield.placeholder = "EX : 바벨컬"
+        self.armWeightTextfield.placeholder = "EX: 10"
+        self.armCountTextfield.placeholder = "EX: 10"
+        self.armSetTextfield.placeholder = "EX: 5"
+        
+        self.registerBtn.layer.cornerRadius = 30
+        armKindTextfield.keyboardType = .default
+        armWeightTextfield.keyboardType = .decimalPad
+        armCountTextfield.keyboardType = .numberPad
+        armSetTextfield.keyboardType = .numberPad
+    }
+    
+    deinit {
+        bag.forEach {$0.cancel()}
+        print("addchestvc 메모리에서 해제되면서 deinit 발동")
+    }
+
 }

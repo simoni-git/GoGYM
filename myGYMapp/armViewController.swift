@@ -7,21 +7,29 @@
 
 import UIKit
 
-class armViewController: UIViewController , armProtocol {
+class armViewController: UIViewController {
     
-    func sendArmData(proArmKind: String, proArmWeight: Double, proArmCount: Int, proArmSet: Int) {
-        let kind = proArmKind
-        let weight = proArmWeight
-        let count = proArmCount
-        let set = proArmSet
-        let data = optionList(kind: kind, weight: weight, count: count, set: set)
-        self.armArray.append(data)
-        
-        let total = weight * Double(count) * Double(set)
-        self.armTotalVolume.append(total)
-        self.tableView.reloadData()
-        print("armViewController 에서 프로토콜에대한 sendArmData 메서드가 실행됨.")
+    var kind: String = "" {
+        didSet {
+            print("kind 에 값들어옴 --> \(kind)")
+        }
     }
+    var weight: Double = 0.0 {
+        didSet {
+            print("weight 에 값들어옴 --> \(weight)")
+        }
+    }
+    var count: Int = 0 {
+        didSet {
+            print("count 에 값들어옴 --> \(count)")
+        }
+    }
+    var set: Int = 0 {
+        didSet {
+            print("set 에 값들어옴 --> \(set)")
+        }
+    }
+   
     
     var armArray = [optionList]() {
         didSet {
@@ -95,8 +103,12 @@ class armViewController: UIViewController , armProtocol {
     
     @IBAction func tapAddArm(_ sender: UIBarButtonItem) {
         guard let addArmVC = self.storyboard?.instantiateViewController(identifier: "addArmViewController") as? addArmViewController else {return}
-        addArmVC.armDelegate = self
         self.navigationController?.pushViewController(addArmVC, animated: true)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        print("viewWillAppear 호출됨, 테이블뷰리로드")
+        self.tableView.reloadData()
     }
     
     override func viewWillDisappear(_ animated: Bool) {

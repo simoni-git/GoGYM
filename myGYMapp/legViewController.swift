@@ -7,20 +7,27 @@
 
 import UIKit
 
-class legViewController: UIViewController , legProtocol {
+class legViewController: UIViewController {
     
-    func sendLegData(proLegKind: String, proLegWeight: Double, proLegCount: Int, proLegSet: Int) {
-        let kind = proLegKind
-        let weight = proLegWeight
-        let count = proLegCount
-        let set = proLegSet
-        let data = optionList(kind: kind, weight: weight, count: count, set: set)
-        self.legArray.append(data)
-        
-        let total = weight * Double(count) * Double(set)
-        self.legTotalVolume.append(total)
-        self.tableView.reloadData()
-        print("legViewController 에서 프로토콜에대한 sendLegData 메서드가 실행됨.")
+    var kind: String = "" {
+        didSet {
+            print("kind 에 값들어옴 --> \(kind)")
+        }
+    }
+    var weight: Double = 0.0 {
+        didSet {
+            print("weight 에 값들어옴 --> \(weight)")
+        }
+    }
+    var count: Int = 0 {
+        didSet {
+            print("count 에 값들어옴 --> \(count)")
+        }
+    }
+    var set: Int = 0 {
+        didSet {
+            print("set 에 값들어옴 --> \(set)")
+        }
     }
     
     var legArray = [optionList]() {
@@ -95,8 +102,12 @@ class legViewController: UIViewController , legProtocol {
     
     @IBAction func tapAddLeg(_ sender: UIBarButtonItem) {
         guard let addLegVC = self.storyboard?.instantiateViewController(identifier: "addLegViewController") as? addLegViewController else {return}
-        addLegVC.legDelegate = self
         self.navigationController?.pushViewController(addLegVC, animated: true)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        print("viewWillAppear 호출됨, 테이블뷰리로드")
+        self.tableView.reloadData()
     }
     
     override func viewWillDisappear(_ animated: Bool) {

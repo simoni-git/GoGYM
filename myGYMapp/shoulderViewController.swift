@@ -7,20 +7,27 @@
 
 import UIKit
 
-class shoulderViewController: UIViewController , shoulderProtocol {
+class shoulderViewController: UIViewController {
     
-    func sendShoulderData(proShoulderKind: String, proShoulderWeight: Double, proShoulderCount: Int, proShoulderSet: Int) {
-        let kind = proShoulderKind
-        let weight = proShoulderWeight
-        let count = proShoulderCount
-        let set = proShoulderSet
-        let data = optionList(kind: kind, weight: weight, count: count, set: set)
-        self.shoulderArray.append(data)
-        
-        let total = weight * Double(count) * Double(set)
-        self.shoulderTotalVolume.append(total)
-        self.tableView.reloadData()
-        print("shoulderViewController 에서 프로토콜에대한 sendLegData 메서드가 실행됨.")
+    var kind: String = "" {
+        didSet {
+            print("kind 에 값들어옴 --> \(kind)")
+        }
+    }
+    var weight: Double = 0.0 {
+        didSet {
+            print("weight 에 값들어옴 --> \(weight)")
+        }
+    }
+    var count: Int = 0 {
+        didSet {
+            print("count 에 값들어옴 --> \(count)")
+        }
+    }
+    var set: Int = 0 {
+        didSet {
+            print("set 에 값들어옴 --> \(set)")
+        }
     }
     
     var shoulderArray = [optionList]() {
@@ -95,8 +102,12 @@ class shoulderViewController: UIViewController , shoulderProtocol {
     
     @IBAction func tapAddShoulder(_ sender: UIBarButtonItem) {
         guard let addShoulderVC = self.storyboard?.instantiateViewController(identifier: "addShoulderViewController") as? addShoulderViewController else {return}
-        addShoulderVC.shoulderDelegate = self
         self.navigationController?.pushViewController(addShoulderVC, animated: true)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        print("viewWillAppear 호출됨, 테이블뷰리로드")
+        self.tableView.reloadData()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
