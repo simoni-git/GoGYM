@@ -8,56 +8,82 @@
 
 /* Begin PBXBuildFile section */
 		041657DE2AEF8E0600BA3647 /* saveList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041657DD2AEF8E0600BA3647 /* saveList.swift */; };
-		046801AE2AF4EDF400E71CEC /* addLegViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046801AD2AF4EDF400E71CEC /* addLegViewController.swift */; };
-		046801B02AF4EE2200E71CEC /* addShoulderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046801AF2AF4EE2200E71CEC /* addShoulderViewController.swift */; };
-		046801B22AF4EE4700E71CEC /* addArmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046801B12AF4EE4700E71CEC /* addArmViewController.swift */; };
+		046801AE2AF4EDF400E71CEC /* AddLegViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046801AD2AF4EDF400E71CEC /* AddLegViewController.swift */; };
+		046801B02AF4EE2200E71CEC /* AddShoulderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046801AF2AF4EE2200E71CEC /* AddShoulderViewController.swift */; };
+		046801B22AF4EE4700E71CEC /* AddArmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046801B12AF4EE4700E71CEC /* AddArmViewController.swift */; };
 		047EEB222AE6D3C5000550C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047EEB212AE6D3C5000550C2 /* AppDelegate.swift */; };
 		047EEB242AE6D3C5000550C2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047EEB232AE6D3C5000550C2 /* SceneDelegate.swift */; };
-		047EEB262AE6D3C5000550C2 /* mainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047EEB252AE6D3C5000550C2 /* mainViewController.swift */; };
+		047EEB262AE6D3C5000550C2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047EEB252AE6D3C5000550C2 /* MainViewController.swift */; };
 		047EEB292AE6D3C5000550C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 047EEB272AE6D3C5000550C2 /* Main.storyboard */; };
 		047EEB2B2AE6D3C7000550C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 047EEB2A2AE6D3C7000550C2 /* Assets.xcassets */; };
 		047EEB2E2AE6D3C7000550C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 047EEB2C2AE6D3C7000550C2 /* LaunchScreen.storyboard */; };
-		047EEB362AE6D93F000550C2 /* gymKindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047EEB352AE6D93F000550C2 /* gymKindViewController.swift */; };
-		047EEB382AE6DD93000550C2 /* chestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047EEB372AE6DD93000550C2 /* chestViewController.swift */; };
-		047EEB3A2AE6DEEB000550C2 /* backViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047EEB392AE6DEEB000550C2 /* backViewController.swift */; };
-		047EEB3C2AE6DEFA000550C2 /* legViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047EEB3B2AE6DEFA000550C2 /* legViewController.swift */; };
-		047EEB3E2AE6DF04000550C2 /* shoulderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047EEB3D2AE6DF04000550C2 /* shoulderViewController.swift */; };
-		047EEB402AE6DF0C000550C2 /* armViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047EEB3F2AE6DF0C000550C2 /* armViewController.swift */; };
-		047EEB422AE6DF18000550C2 /* finishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047EEB412AE6DF18000550C2 /* finishViewController.swift */; };
-		047EEB442AE6E07D000550C2 /* historyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047EEB432AE6E07D000550C2 /* historyViewController.swift */; };
+		047EEB362AE6D93F000550C2 /* GymKindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047EEB352AE6D93F000550C2 /* GymKindViewController.swift */; };
+		047EEB382AE6DD93000550C2 /* ChestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047EEB372AE6DD93000550C2 /* ChestViewController.swift */; };
+		047EEB3A2AE6DEEB000550C2 /* BackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047EEB392AE6DEEB000550C2 /* BackViewController.swift */; };
+		047EEB3C2AE6DEFA000550C2 /* LegViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047EEB3B2AE6DEFA000550C2 /* LegViewController.swift */; };
+		047EEB3E2AE6DF04000550C2 /* ShoulderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047EEB3D2AE6DF04000550C2 /* ShoulderViewController.swift */; };
+		047EEB402AE6DF0C000550C2 /* ArmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047EEB3F2AE6DF0C000550C2 /* ArmViewController.swift */; };
+		047EEB422AE6DF18000550C2 /* FinishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047EEB412AE6DF18000550C2 /* FinishViewController.swift */; };
+		047EEB442AE6E07D000550C2 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047EEB432AE6E07D000550C2 /* HistoryViewController.swift */; };
 		049A54A62AE7622D0021DB50 /* optionList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049A54A52AE7622D0021DB50 /* optionList.swift */; };
-		049F2E8C2AF37E11008BF1EC /* addBackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F2E8B2AF37E11008BF1EC /* addBackViewController.swift */; };
+		049F2E8C2AF37E11008BF1EC /* AddBackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F2E8B2AF37E11008BF1EC /* AddBackViewController.swift */; };
 		04C01D162AF1F99A00CB4B39 /* HistoryInfo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 04C01D142AF1F99A00CB4B39 /* HistoryInfo.xcdatamodeld */; };
-		04C01D3F2AF2681900CB4B39 /* addChestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C01D3E2AF2681900CB4B39 /* addChestViewController.swift */; };
+		04C01D3F2AF2681900CB4B39 /* AddChestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C01D3E2AF2681900CB4B39 /* AddChestViewController.swift */; };
 		E41706952B21AA20004C3DA5 /* extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41706942B21AA20004C3DA5 /* extention.swift */; };
+		E417069B2B23137E004C3DA5 /* AddChestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E417069A2B23137E004C3DA5 /* AddChestViewModel.swift */; };
+		E417069D2B23154D004C3DA5 /* ChestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E417069C2B23154D004C3DA5 /* ChestViewModel.swift */; };
+		E417069F2B234F58004C3DA5 /* BackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E417069E2B234F58004C3DA5 /* BackViewModel.swift */; };
+		E41706A12B234F73004C3DA5 /* AddBackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41706A02B234F73004C3DA5 /* AddBackViewModel.swift */; };
+		E41706A32B235429004C3DA5 /* LegViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41706A22B235429004C3DA5 /* LegViewModel.swift */; };
+		E41706A52B235435004C3DA5 /* AddLegViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41706A42B235435004C3DA5 /* AddLegViewModel.swift */; };
+		E41706A72B235818004C3DA5 /* ShoulderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41706A62B235818004C3DA5 /* ShoulderViewModel.swift */; };
+		E41706A92B23582E004C3DA5 /* AddShoulderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41706A82B23582E004C3DA5 /* AddShoulderViewModel.swift */; };
+		E41706AB2B235B40004C3DA5 /* ArmViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41706AA2B235B40004C3DA5 /* ArmViewModel.swift */; };
+		E41706AD2B235B4C004C3DA5 /* AddArmViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41706AC2B235B4C004C3DA5 /* AddArmViewModel.swift */; };
+		E4A0A86B2B2450FB00C5DDA2 /* GymKindViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A0A86A2B2450FB00C5DDA2 /* GymKindViewModel.swift */; };
+		E4A0A86E2B24530E00C5DDA2 /* HistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A0A86D2B24530E00C5DDA2 /* HistoryViewModel.swift */; };
+		E4A0A8712B2455BA00C5DDA2 /* FinishViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A0A8702B2455BA00C5DDA2 /* FinishViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		041657DD2AEF8E0600BA3647 /* saveList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = saveList.swift; sourceTree = "<group>"; };
-		046801AD2AF4EDF400E71CEC /* addLegViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addLegViewController.swift; sourceTree = "<group>"; };
-		046801AF2AF4EE2200E71CEC /* addShoulderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addShoulderViewController.swift; sourceTree = "<group>"; };
-		046801B12AF4EE4700E71CEC /* addArmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addArmViewController.swift; sourceTree = "<group>"; };
+		046801AD2AF4EDF400E71CEC /* AddLegViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLegViewController.swift; sourceTree = "<group>"; };
+		046801AF2AF4EE2200E71CEC /* AddShoulderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddShoulderViewController.swift; sourceTree = "<group>"; };
+		046801B12AF4EE4700E71CEC /* AddArmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddArmViewController.swift; sourceTree = "<group>"; };
 		047EEB1E2AE6D3C5000550C2 /* myGYMapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myGYMapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		047EEB212AE6D3C5000550C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		047EEB232AE6D3C5000550C2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		047EEB252AE6D3C5000550C2 /* mainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainViewController.swift; sourceTree = "<group>"; };
+		047EEB252AE6D3C5000550C2 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		047EEB282AE6D3C5000550C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		047EEB2A2AE6D3C7000550C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		047EEB2D2AE6D3C7000550C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		047EEB2F2AE6D3C7000550C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		047EEB352AE6D93F000550C2 /* gymKindViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gymKindViewController.swift; sourceTree = "<group>"; };
-		047EEB372AE6DD93000550C2 /* chestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chestViewController.swift; sourceTree = "<group>"; };
-		047EEB392AE6DEEB000550C2 /* backViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = backViewController.swift; sourceTree = "<group>"; };
-		047EEB3B2AE6DEFA000550C2 /* legViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = legViewController.swift; sourceTree = "<group>"; };
-		047EEB3D2AE6DF04000550C2 /* shoulderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shoulderViewController.swift; sourceTree = "<group>"; };
-		047EEB3F2AE6DF0C000550C2 /* armViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = armViewController.swift; sourceTree = "<group>"; };
-		047EEB412AE6DF18000550C2 /* finishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = finishViewController.swift; sourceTree = "<group>"; };
-		047EEB432AE6E07D000550C2 /* historyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = historyViewController.swift; sourceTree = "<group>"; };
+		047EEB352AE6D93F000550C2 /* GymKindViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymKindViewController.swift; sourceTree = "<group>"; };
+		047EEB372AE6DD93000550C2 /* ChestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChestViewController.swift; sourceTree = "<group>"; };
+		047EEB392AE6DEEB000550C2 /* BackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackViewController.swift; sourceTree = "<group>"; };
+		047EEB3B2AE6DEFA000550C2 /* LegViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegViewController.swift; sourceTree = "<group>"; };
+		047EEB3D2AE6DF04000550C2 /* ShoulderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoulderViewController.swift; sourceTree = "<group>"; };
+		047EEB3F2AE6DF0C000550C2 /* ArmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArmViewController.swift; sourceTree = "<group>"; };
+		047EEB412AE6DF18000550C2 /* FinishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishViewController.swift; sourceTree = "<group>"; };
+		047EEB432AE6E07D000550C2 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		049A54A52AE7622D0021DB50 /* optionList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = optionList.swift; sourceTree = "<group>"; };
-		049F2E8B2AF37E11008BF1EC /* addBackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addBackViewController.swift; sourceTree = "<group>"; };
+		049F2E8B2AF37E11008BF1EC /* AddBackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBackViewController.swift; sourceTree = "<group>"; };
 		04C01D152AF1F99A00CB4B39 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
-		04C01D3E2AF2681900CB4B39 /* addChestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addChestViewController.swift; sourceTree = "<group>"; };
+		04C01D3E2AF2681900CB4B39 /* AddChestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddChestViewController.swift; sourceTree = "<group>"; };
 		E41706942B21AA20004C3DA5 /* extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extention.swift; sourceTree = "<group>"; };
+		E417069A2B23137E004C3DA5 /* AddChestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddChestViewModel.swift; sourceTree = "<group>"; };
+		E417069C2B23154D004C3DA5 /* ChestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChestViewModel.swift; sourceTree = "<group>"; };
+		E417069E2B234F58004C3DA5 /* BackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackViewModel.swift; sourceTree = "<group>"; };
+		E41706A02B234F73004C3DA5 /* AddBackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBackViewModel.swift; sourceTree = "<group>"; };
+		E41706A22B235429004C3DA5 /* LegViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegViewModel.swift; sourceTree = "<group>"; };
+		E41706A42B235435004C3DA5 /* AddLegViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLegViewModel.swift; sourceTree = "<group>"; };
+		E41706A62B235818004C3DA5 /* ShoulderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoulderViewModel.swift; sourceTree = "<group>"; };
+		E41706A82B23582E004C3DA5 /* AddShoulderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddShoulderViewModel.swift; sourceTree = "<group>"; };
+		E41706AA2B235B40004C3DA5 /* ArmViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArmViewModel.swift; sourceTree = "<group>"; };
+		E41706AC2B235B4C004C3DA5 /* AddArmViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddArmViewModel.swift; sourceTree = "<group>"; };
+		E4A0A86A2B2450FB00C5DDA2 /* GymKindViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymKindViewModel.swift; sourceTree = "<group>"; };
+		E4A0A86D2B24530E00C5DDA2 /* HistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewModel.swift; sourceTree = "<group>"; };
+		E4A0A8702B2455BA00C5DDA2 /* FinishViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,8 +100,7 @@
 		047EEB152AE6D3C5000550C2 = {
 			isa = PBXGroup;
 			children = (
-				049A54A52AE7622D0021DB50 /* optionList.swift */,
-				041657DD2AEF8E0600BA3647 /* saveList.swift */,
+				E4A0A8662B244A4800C5DDA2 /* Models */,
 				047EEB202AE6D3C5000550C2 /* myGYMapp */,
 				047EEB1F2AE6D3C5000550C2 /* Products */,
 			);
@@ -96,26 +121,104 @@
 				047EEB232AE6D3C5000550C2 /* SceneDelegate.swift */,
 				E41706942B21AA20004C3DA5 /* extention.swift */,
 				047EEB272AE6D3C5000550C2 /* Main.storyboard */,
-				047EEB432AE6E07D000550C2 /* historyViewController.swift */,
-				047EEB252AE6D3C5000550C2 /* mainViewController.swift */,
-				047EEB352AE6D93F000550C2 /* gymKindViewController.swift */,
-				047EEB372AE6DD93000550C2 /* chestViewController.swift */,
-				04C01D3E2AF2681900CB4B39 /* addChestViewController.swift */,
-				047EEB392AE6DEEB000550C2 /* backViewController.swift */,
-				049F2E8B2AF37E11008BF1EC /* addBackViewController.swift */,
-				047EEB3B2AE6DEFA000550C2 /* legViewController.swift */,
-				046801AD2AF4EDF400E71CEC /* addLegViewController.swift */,
-				047EEB3D2AE6DF04000550C2 /* shoulderViewController.swift */,
-				046801AF2AF4EE2200E71CEC /* addShoulderViewController.swift */,
-				047EEB3F2AE6DF0C000550C2 /* armViewController.swift */,
-				046801B12AF4EE4700E71CEC /* addArmViewController.swift */,
-				047EEB412AE6DF18000550C2 /* finishViewController.swift */,
-				047EEB2A2AE6D3C7000550C2 /* Assets.xcassets */,
+				047EEB252AE6D3C5000550C2 /* MainViewController.swift */,
+				E4A0A86C2B24510000C5DDA2 /* GymKinds */,
+				E4A0A86F2B24531600C5DDA2 /* Historys */,
+				E41706AF2B235E92004C3DA5 /* DefaultVC */,
+				E4A0A8672B244A9E00C5DDA2 /* DefaultVM */,
+				E4A0A8692B244DD600C5DDA2 /* AddVC */,
+				E4A0A8682B244B8D00C5DDA2 /* AddVM */,
+				E4A0A8722B2455BE00C5DDA2 /* Finishs */,
 				047EEB2C2AE6D3C7000550C2 /* LaunchScreen.storyboard */,
 				047EEB2F2AE6D3C7000550C2 /* Info.plist */,
 				04C01D142AF1F99A00CB4B39 /* HistoryInfo.xcdatamodeld */,
 			);
 			path = myGYMapp;
+			sourceTree = "<group>";
+		};
+		E41706AF2B235E92004C3DA5 /* DefaultVC */ = {
+			isa = PBXGroup;
+			children = (
+				047EEB372AE6DD93000550C2 /* ChestViewController.swift */,
+				047EEB392AE6DEEB000550C2 /* BackViewController.swift */,
+				047EEB3B2AE6DEFA000550C2 /* LegViewController.swift */,
+				047EEB3D2AE6DF04000550C2 /* ShoulderViewController.swift */,
+				047EEB3F2AE6DF0C000550C2 /* ArmViewController.swift */,
+			);
+			path = DefaultVC;
+			sourceTree = "<group>";
+		};
+		E4A0A8662B244A4800C5DDA2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				041657DD2AEF8E0600BA3647 /* saveList.swift */,
+				049A54A52AE7622D0021DB50 /* optionList.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E4A0A8672B244A9E00C5DDA2 /* DefaultVM */ = {
+			isa = PBXGroup;
+			children = (
+				E417069C2B23154D004C3DA5 /* ChestViewModel.swift */,
+				E417069E2B234F58004C3DA5 /* BackViewModel.swift */,
+				E41706A22B235429004C3DA5 /* LegViewModel.swift */,
+				E41706A62B235818004C3DA5 /* ShoulderViewModel.swift */,
+				E41706AA2B235B40004C3DA5 /* ArmViewModel.swift */,
+			);
+			path = DefaultVM;
+			sourceTree = "<group>";
+		};
+		E4A0A8682B244B8D00C5DDA2 /* AddVM */ = {
+			isa = PBXGroup;
+			children = (
+				E417069A2B23137E004C3DA5 /* AddChestViewModel.swift */,
+				E41706A02B234F73004C3DA5 /* AddBackViewModel.swift */,
+				E41706A42B235435004C3DA5 /* AddLegViewModel.swift */,
+				E41706A82B23582E004C3DA5 /* AddShoulderViewModel.swift */,
+				E41706AC2B235B4C004C3DA5 /* AddArmViewModel.swift */,
+			);
+			path = AddVM;
+			sourceTree = "<group>";
+		};
+		E4A0A8692B244DD600C5DDA2 /* AddVC */ = {
+			isa = PBXGroup;
+			children = (
+				04C01D3E2AF2681900CB4B39 /* AddChestViewController.swift */,
+				049F2E8B2AF37E11008BF1EC /* AddBackViewController.swift */,
+				046801AD2AF4EDF400E71CEC /* AddLegViewController.swift */,
+				046801AF2AF4EE2200E71CEC /* AddShoulderViewController.swift */,
+				046801B12AF4EE4700E71CEC /* AddArmViewController.swift */,
+			);
+			path = AddVC;
+			sourceTree = "<group>";
+		};
+		E4A0A86C2B24510000C5DDA2 /* GymKinds */ = {
+			isa = PBXGroup;
+			children = (
+				047EEB352AE6D93F000550C2 /* GymKindViewController.swift */,
+				E4A0A86A2B2450FB00C5DDA2 /* GymKindViewModel.swift */,
+			);
+			path = GymKinds;
+			sourceTree = "<group>";
+		};
+		E4A0A86F2B24531600C5DDA2 /* Historys */ = {
+			isa = PBXGroup;
+			children = (
+				047EEB432AE6E07D000550C2 /* HistoryViewController.swift */,
+				E4A0A86D2B24530E00C5DDA2 /* HistoryViewModel.swift */,
+			);
+			path = Historys;
+			sourceTree = "<group>";
+		};
+		E4A0A8722B2455BE00C5DDA2 /* Finishs */ = {
+			isa = PBXGroup;
+			children = (
+				047EEB412AE6DF18000550C2 /* FinishViewController.swift */,
+				E4A0A8702B2455BA00C5DDA2 /* FinishViewModel.swift */,
+				047EEB2A2AE6D3C7000550C2 /* Assets.xcassets */,
+			);
+			path = Finishs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,26 +292,39 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				047EEB362AE6D93F000550C2 /* gymKindViewController.swift in Sources */,
-				047EEB422AE6DF18000550C2 /* finishViewController.swift in Sources */,
-				047EEB262AE6D3C5000550C2 /* mainViewController.swift in Sources */,
+				047EEB362AE6D93F000550C2 /* GymKindViewController.swift in Sources */,
+				E41706AD2B235B4C004C3DA5 /* AddArmViewModel.swift in Sources */,
+				E417069B2B23137E004C3DA5 /* AddChestViewModel.swift in Sources */,
+				047EEB422AE6DF18000550C2 /* FinishViewController.swift in Sources */,
+				E41706A72B235818004C3DA5 /* ShoulderViewModel.swift in Sources */,
+				047EEB262AE6D3C5000550C2 /* MainViewController.swift in Sources */,
 				04C01D162AF1F99A00CB4B39 /* HistoryInfo.xcdatamodeld in Sources */,
 				047EEB222AE6D3C5000550C2 /* AppDelegate.swift in Sources */,
-				047EEB382AE6DD93000550C2 /* chestViewController.swift in Sources */,
-				047EEB442AE6E07D000550C2 /* historyViewController.swift in Sources */,
-				046801B22AF4EE4700E71CEC /* addArmViewController.swift in Sources */,
-				04C01D3F2AF2681900CB4B39 /* addChestViewController.swift in Sources */,
-				046801B02AF4EE2200E71CEC /* addShoulderViewController.swift in Sources */,
-				047EEB3E2AE6DF04000550C2 /* shoulderViewController.swift in Sources */,
-				047EEB3C2AE6DEFA000550C2 /* legViewController.swift in Sources */,
+				E41706A32B235429004C3DA5 /* LegViewModel.swift in Sources */,
+				E41706A92B23582E004C3DA5 /* AddShoulderViewModel.swift in Sources */,
+				047EEB382AE6DD93000550C2 /* ChestViewController.swift in Sources */,
+				047EEB442AE6E07D000550C2 /* HistoryViewController.swift in Sources */,
+				046801B22AF4EE4700E71CEC /* AddArmViewController.swift in Sources */,
+				E417069F2B234F58004C3DA5 /* BackViewModel.swift in Sources */,
+				E41706A52B235435004C3DA5 /* AddLegViewModel.swift in Sources */,
+				E4A0A86E2B24530E00C5DDA2 /* HistoryViewModel.swift in Sources */,
+				04C01D3F2AF2681900CB4B39 /* AddChestViewController.swift in Sources */,
+				046801B02AF4EE2200E71CEC /* AddShoulderViewController.swift in Sources */,
+				047EEB3E2AE6DF04000550C2 /* ShoulderViewController.swift in Sources */,
+				E4A0A8712B2455BA00C5DDA2 /* FinishViewModel.swift in Sources */,
+				047EEB3C2AE6DEFA000550C2 /* LegViewController.swift in Sources */,
+				E4A0A86B2B2450FB00C5DDA2 /* GymKindViewModel.swift in Sources */,
 				E41706952B21AA20004C3DA5 /* extention.swift in Sources */,
-				047EEB402AE6DF0C000550C2 /* armViewController.swift in Sources */,
+				E417069D2B23154D004C3DA5 /* ChestViewModel.swift in Sources */,
+				047EEB402AE6DF0C000550C2 /* ArmViewController.swift in Sources */,
 				049A54A62AE7622D0021DB50 /* optionList.swift in Sources */,
+				E41706AB2B235B40004C3DA5 /* ArmViewModel.swift in Sources */,
 				041657DE2AEF8E0600BA3647 /* saveList.swift in Sources */,
 				047EEB242AE6D3C5000550C2 /* SceneDelegate.swift in Sources */,
-				046801AE2AF4EDF400E71CEC /* addLegViewController.swift in Sources */,
-				047EEB3A2AE6DEEB000550C2 /* backViewController.swift in Sources */,
-				049F2E8C2AF37E11008BF1EC /* addBackViewController.swift in Sources */,
+				046801AE2AF4EDF400E71CEC /* AddLegViewController.swift in Sources */,
+				047EEB3A2AE6DEEB000550C2 /* BackViewController.swift in Sources */,
+				049F2E8C2AF37E11008BF1EC /* AddBackViewController.swift in Sources */,
+				E41706A12B234F73004C3DA5 /* AddBackViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

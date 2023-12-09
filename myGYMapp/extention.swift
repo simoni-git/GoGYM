@@ -14,13 +14,13 @@ extension UITextField {
             .compactMap{$0.object as? UITextField}
             .map{$0.text ?? ""}
             .eraseToAnyPublisher()
-        
+            
     }
     
     var myWeightPublisher: AnyPublisher<Double , Never> {
         NotificationCenter.default.publisher(for: UITextField.textDidChangeNotification, object: self)
             .compactMap{$0.object as? UITextField}
-            .map{Double($0.text ?? "")!}
+            .compactMap { Double($0.text ?? "") }
             .eraseToAnyPublisher()
         
     }
@@ -28,7 +28,7 @@ extension UITextField {
     var myCountPublisher: AnyPublisher<Int , Never> {
         NotificationCenter.default.publisher(for: UITextField.textDidChangeNotification, object: self)
             .compactMap{$0.object as? UITextField}
-            .map{Int($0.text ?? "")!}
+            .compactMap { Int($0.text ?? "") }
             .eraseToAnyPublisher()
         
     }
@@ -36,7 +36,7 @@ extension UITextField {
     var mySetPublisher: AnyPublisher<Int , Never> {
         NotificationCenter.default.publisher(for: UITextField.textDidChangeNotification, object: self)
             .compactMap{$0.object as? UITextField}
-            .map{Int($0.text ?? "")!}
+            .compactMap { Int($0.text ?? "") }
             .eraseToAnyPublisher()
         
     }

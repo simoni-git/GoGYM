@@ -13,7 +13,7 @@
         <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="mainViewController" id="BYZ-38-t0r" customClass="mainViewController" customModule="myGYMapp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainViewController" id="BYZ-38-t0r" customClass="MainViewController" customModule="myGYMapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -101,7 +101,7 @@
         <!--History View Controller-->
         <scene sceneID="Dcs-7y-MD7">
             <objects>
-                <viewController storyboardIdentifier="historyViewController" id="qVM-Wi-wI8" customClass="historyViewController" customModule="myGYMapp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HistoryViewController" id="qVM-Wi-wI8" customClass="HistoryViewController" customModule="myGYMapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Wor-jY-IiW">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -113,7 +113,7 @@
                                 <rect key="frame" x="0.0" y="103" width="393" height="715"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="histroyCell" rowHeight="145" id="wfB-BS-vpd" customClass="histroyCell" customModule="myGYMapp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="HistroyCell" rowHeight="145" id="wfB-BS-vpd" customClass="HistroyCell" customModule="myGYMapp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="393" height="145"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wfB-BS-vpd" id="9Te-gu-yP0">
@@ -191,7 +191,7 @@
         <!--운동종류-->
         <scene sceneID="omd-oX-28f">
             <objects>
-                <viewController storyboardIdentifier="gymKindViewController" id="2VU-Cf-Dzt" customClass="gymKindViewController" customModule="myGYMapp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GymKindViewController" id="2VU-Cf-Dzt" customClass="GymKindViewController" customModule="myGYMapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cDq-oM-cbh">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -358,7 +358,7 @@
         <!--가슴운동-->
         <scene sceneID="YIY-Ea-PUB">
             <objects>
-                <viewController storyboardIdentifier="chestViewController" id="lLR-QO-oxJ" customClass="chestViewController" customModule="myGYMapp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChestViewController" id="lLR-QO-oxJ" customClass="ChestViewController" customModule="myGYMapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xs9-9F-miw">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -516,13 +516,13 @@
                         <barButtonItem key="rightBarButtonItem" title="가슴운동 추가" id="Nr7-0A-ifF">
                             <color key="tintColor" name="AccentColor"/>
                             <connections>
-                                <action selector="tapAddChest:" destination="lLR-QO-oxJ" id="sco-9l-HRC"/>
+                                <action selector="tapAddChest:" destination="lLR-QO-oxJ" id="IAB-5y-ef3"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="chestTotalVolumeLabel" destination="xze-TP-iqO" id="KNA-PE-ebv"/>
-                        <outlet property="tableView" destination="UhB-D2-9lh" id="TTw-M8-VhU"/>
+                        <outlet property="chestTotalVolumeLabel" destination="xze-TP-iqO" id="yia-VZ-eyF"/>
+                        <outlet property="tableView" destination="UhB-D2-9lh" id="R0Z-AI-NYg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bwj-rQ-IYz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -532,7 +532,7 @@
         <!--Finish-->
         <scene sceneID="yll-Nj-Dku">
             <objects>
-                <viewController storyboardIdentifier="finishViewController" id="vp5-2t-t0h" customClass="finishViewController" customModule="myGYMapp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FinishViewController" id="vp5-2t-t0h" customClass="FinishViewController" customModule="myGYMapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dx4-2q-ahn">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -705,7 +705,7 @@
         <!--Back-->
         <scene sceneID="lBj-20-eSb">
             <objects>
-                <viewController storyboardIdentifier="backViewController" id="x3Z-TK-5kg" userLabel="Back" customClass="backViewController" customModule="myGYMapp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BackViewController" id="x3Z-TK-5kg" userLabel="Back" customClass="BackViewController" customModule="myGYMapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DDW-3z-rgc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -879,7 +879,7 @@
         <!--Leg-->
         <scene sceneID="xCf-2o-zv1">
             <objects>
-                <viewController storyboardIdentifier="legViewController" id="CKx-Sd-yeD" userLabel="Leg" customClass="legViewController" customModule="myGYMapp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LegViewController" id="CKx-Sd-yeD" userLabel="Leg" customClass="LegViewController" customModule="myGYMapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YvS-VH-HXL">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1053,7 +1053,7 @@
         <!--Shoulder-->
         <scene sceneID="Uiz-BP-h7b">
             <objects>
-                <viewController storyboardIdentifier="shoulderViewController" id="f0P-Wl-Ntx" userLabel="Shoulder" customClass="shoulderViewController" customModule="myGYMapp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ShoulderViewController" id="f0P-Wl-Ntx" userLabel="Shoulder" customClass="ShoulderViewController" customModule="myGYMapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uAs-gx-hSZ">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1227,7 +1227,7 @@
         <!--Arm-->
         <scene sceneID="7V9-6M-Fny">
             <objects>
-                <viewController storyboardIdentifier="armViewController" id="8c4-lR-vGW" userLabel="Arm" customClass="armViewController" customModule="myGYMapp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ArmViewController" id="8c4-lR-vGW" userLabel="Arm" customClass="ArmViewController" customModule="myGYMapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Zy3-dN-bP1">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1401,7 +1401,7 @@
         <!--Add Back View Controller-->
         <scene sceneID="fl7-f7-QXA">
             <objects>
-                <viewController storyboardIdentifier="addBackViewController" id="gXq-ub-b0g" customClass="addBackViewController" customModule="myGYMapp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddBackViewController" id="gXq-ub-b0g" customClass="AddBackViewController" customModule="myGYMapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hPQ-DC-fP1">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1525,7 +1525,7 @@
         <!--Add Chest View Controller-->
         <scene sceneID="Q4L-ut-5US">
             <objects>
-                <viewController storyboardIdentifier="addChestViewController" id="fVd-vT-BH0" customClass="addChestViewController" customModule="myGYMapp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddChestViewController" id="fVd-vT-BH0" customClass="AddChestViewController" customModule="myGYMapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7NY-Zd-RH8">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1649,7 +1649,7 @@
         <!--Add Leg View Controller-->
         <scene sceneID="wP7-xf-E1T">
             <objects>
-                <viewController storyboardIdentifier="addLegViewController" id="rIz-6t-K2U" customClass="addLegViewController" customModule="myGYMapp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddLegViewController" id="rIz-6t-K2U" customClass="AddLegViewController" customModule="myGYMapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="d0d-DH-lzp">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1773,7 +1773,7 @@
         <!--Add Shoulder View Controller-->
         <scene sceneID="iKI-O2-5uL">
             <objects>
-                <viewController storyboardIdentifier="addShoulderViewController" id="iKf-Jb-leP" customClass="addShoulderViewController" customModule="myGYMapp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddShoulderViewController" id="iKf-Jb-leP" customClass="AddShoulderViewController" customModule="myGYMapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iuX-mQ-WPR">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1897,7 +1897,7 @@
         <!--Add Arm View Controller-->
         <scene sceneID="tg3-9B-ejR">
             <objects>
-                <viewController storyboardIdentifier="addArmViewController" id="EUS-ju-foe" customClass="addArmViewController" customModule="myGYMapp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddArmViewController" id="EUS-ju-foe" customClass="AddArmViewController" customModule="myGYMapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="W7w-Yt-8t6">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
