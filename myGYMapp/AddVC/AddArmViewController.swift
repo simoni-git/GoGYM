@@ -25,7 +25,6 @@ class AddArmViewController: UIViewController {
         
         configure()
         viewmodel = AddArmViewModel()
-        armVM = ArmViewModel.shared
     
             armKindTextfield
                 .myKindPublisher

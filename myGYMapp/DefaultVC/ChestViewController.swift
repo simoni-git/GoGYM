@@ -16,7 +16,7 @@ class ChestViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        viewmodel = ChestViewModel.shared
+        viewmodel = ChestViewModel()
         tableView.dataSource = self
         tableView.delegate = self
         viewmodel.loadDataOfChestArray()
@@ -27,6 +27,7 @@ class ChestViewController: UIViewController {
     @IBAction func tapAddChest(_ sender: UIBarButtonItem) {
         
         guard let addChestVC = self.storyboard?.instantiateViewController(identifier: "AddChestViewController") as? AddChestViewController else {return}
+        addChestVC.chestVM = self.viewmodel
         
         self.navigationController?.pushViewController(addChestVC, animated: true)
     }

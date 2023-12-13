@@ -8,10 +8,7 @@
 import Foundation
 
 class ArmViewModel {
-    
-    static let shared = ArmViewModel()
-    private init() {}
-    
+ 
     var kind: String = "" {
         didSet {
             print("kind 에 값들어옴 --> \(kind)")

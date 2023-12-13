@@ -16,7 +16,7 @@ class ArmViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        viewmodel = ArmViewModel.shared
+        viewmodel = ArmViewModel()
         tableView.dataSource = self
         tableView.delegate = self
         viewmodel.loadDataOfArmArray()
@@ -26,6 +26,7 @@ class ArmViewController: UIViewController {
     
     @IBAction func tapAddArm(_ sender: UIBarButtonItem) {
         guard let addArmVC = self.storyboard?.instantiateViewController(identifier: "AddArmViewController") as? AddArmViewController else {return}
+        addArmVC.armVM = self.viewmodel
         self.navigationController?.pushViewController(addArmVC, animated: true)
     }
     

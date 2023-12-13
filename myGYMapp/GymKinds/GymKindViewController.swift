@@ -24,7 +24,7 @@ class GymKindViewController: UIViewController {
         super.viewDidLoad()
         
         viewmodel = GymKindViewModel()
-        finishVM = FinishViewModel.shared
+        finishVM = FinishViewModel()
         configureView()
         viewmodel.loadData()
         viewmodel.observer()
@@ -48,6 +48,7 @@ class GymKindViewController: UIViewController {
         let okBtn = UIAlertAction(title: "네", style: .default) { [weak self] _ in
             
             guard let finishVC = self?.storyboard?.instantiateViewController(identifier: "FinishViewController") as? FinishViewController else {return}
+            finishVC.viewmodel = self?.finishVM
             
             self!.finishVM.chestTotalvolume = self!.viewmodel.chestvolumevalue
             self!.finishVM.backTotalVolume = self!.viewmodel.backvolumevalue

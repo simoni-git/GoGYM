@@ -26,7 +26,7 @@ class AddChestViewController: UIViewController {
         configureView()
         viewmodel = AddChestViewModel()
         //⬇️ 싱글톤패턴으로 하니까 저장됨!!!
-         chestVM = ChestViewModel.shared
+        
 
             chestKindTextfield
                 .myKindPublisher

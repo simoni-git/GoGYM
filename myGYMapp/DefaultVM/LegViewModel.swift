@@ -9,9 +9,6 @@ import Foundation
 
 class LegViewModel {
     
-    static let shared = LegViewModel()
-    private init() {}
-    
     var kind: String = "" {
         didSet {
             print("kind 에 값들어옴 --> \(kind)")

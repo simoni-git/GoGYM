@@ -10,9 +10,6 @@ import CoreData
 
 class FinishViewModel {
     
-    static let shared = FinishViewModel()
-    private init() {}
-    
     var context: NSManagedObjectContext {
         guard let app = UIApplication.shared.delegate as? AppDelegate else {
             fatalError()

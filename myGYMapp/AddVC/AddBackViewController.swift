@@ -25,7 +25,6 @@ class AddBackViewController: UIViewController {
         
         configureView()
         viewmodel = AddBackViewModel()
-        backVM = BackViewModel.shared
         
             backKindTextfield
                 .myKindPublisher

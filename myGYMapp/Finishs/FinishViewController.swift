@@ -31,7 +31,6 @@ class FinishViewController: UIViewController {
         self.doneBtn.layer.cornerRadius = 5
         self.saveBtn.layer.cornerRadius = 15
         setupDatePicker()
-        viewmodel = FinishViewModel.shared
         updateUI()
     }
     

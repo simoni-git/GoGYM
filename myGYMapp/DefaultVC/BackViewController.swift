@@ -16,7 +16,7 @@ class BackViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        viewmodel = BackViewModel.shared
+        viewmodel = BackViewModel()
         tableView.dataSource = self
         tableView.delegate = self
         viewmodel.loadDataOfbackArray()
@@ -27,6 +27,7 @@ class BackViewController: UIViewController {
     @IBAction func tapAddBack(_ sender: UIBarButtonItem) {
         
         guard let addBackVC = self.storyboard?.instantiateViewController(identifier: "AddBackViewController") as? AddBackViewController else {return}
+        addBackVC.backVM = self.viewmodel
         self.navigationController?.pushViewController(addBackVC, animated: true)
     }
     

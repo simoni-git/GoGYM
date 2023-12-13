@@ -25,7 +25,6 @@ class AddShoulderViewController: UIViewController {
         
         configureView()
         viewmodel = AddShoulderViewModel()
-        shoulderVM = ShoulderViewModel.shared
      
             shoulderKindTextfield
                 .myKindPublisher

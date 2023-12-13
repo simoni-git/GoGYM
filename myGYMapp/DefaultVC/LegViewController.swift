@@ -16,7 +16,7 @@ class LegViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        viewmodel = LegViewModel.shared
+        viewmodel = LegViewModel()
         tableView.dataSource = self
         tableView.delegate = self
         viewmodel.loadDataOfLegArray()
@@ -26,6 +26,7 @@ class LegViewController: UIViewController {
     
     @IBAction func tapAddLeg(_ sender: UIBarButtonItem) {
         guard let addLegVC = self.storyboard?.instantiateViewController(identifier: "AddLegViewController") as? AddLegViewController else {return}
+        addLegVC.legVM = self.viewmodel
         self.navigationController?.pushViewController(addLegVC, animated: true)
     }
     

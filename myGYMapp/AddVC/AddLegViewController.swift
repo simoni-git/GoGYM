@@ -25,7 +25,6 @@ class AddLegViewController: UIViewController {
         
         configureView()
         viewmodel = AddLegViewModel()
-        legVM = LegViewModel.shared
             
             legKindTextfield
                 .myKindPublisher

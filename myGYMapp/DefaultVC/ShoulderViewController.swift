@@ -16,7 +16,7 @@ class ShoulderViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        viewmodel = ShoulderViewModel.shared
+        viewmodel = ShoulderViewModel()
         tableView.dataSource = self
         tableView.delegate = self
         viewmodel.loadDataOfShoulderArray()
@@ -26,6 +26,7 @@ class ShoulderViewController: UIViewController {
     
     @IBAction func tapAddShoulder(_ sender: UIBarButtonItem) {
         guard let addShoulderVC = self.storyboard?.instantiateViewController(identifier: "AddShoulderViewController") as? AddShoulderViewController else {return}
+        addShoulderVC.shoulderVM = self.viewmodel
         self.navigationController?.pushViewController(addShoulderVC, animated: true)
     }
     
